@@ -41,58 +41,43 @@ link  - Ascertains certain Info about the established connection
 
 scan  - Scan without further parameters scans for available WLAN-nets and prints them with their beacon-delivered info
 
-	db
-link & scan can have additional db arguments for database access
+db  - link & scan can have additional db arguments for database access
 
-	db send
-sends the data, ascertained from done link or scan, to the database
+db send  - sends the data, ascertained from done link or scan, to the database
 
-	db get
-requests Data from the database
+db get  - requests Data from the database
 
-	scan search [ssid]
-With this you can forward a specific ssid, to search for.
+scan search [ssid]  - With this you can forward a specific ssid, to search for.
 If one or more WLANs with this ssid are in range it prints them.
 
-	set
-Used to set settings, specified with further arguments
+set  - Used to set settings, specified with further arguments
 
-	set txpower <auto | fixed | limited> [value in mBm]
-set the transmission power of your interface device
+set txpower <auto | fixed | limited> [value in mBm]  - set the transmission power of your interface device
 
-	help
-Some helpful things like informational prints
+help  - Some helpful things like informational prints
 
-	endian
-Prints the System Endianess.
+endian  - Prints the System Endianess.
 
-	help print <iftype | cmdatts>
-iftype: Prints the Device Infrastructure Types
+help print <iftype | cmdatts>  - iftype: Prints the Device Infrastructure Types
 cmdatts: Prints the Attributes which are delivered after a request with the specified nl80211-command. For now the cmd has to specified directly inside the source-code.
 
 
-	son
-the pretty functions about the Self Organizing Networks
+son  - the pretty functions about the Self Organizing Networks
 
-	son adapttxpower
-run Ollerus seperately in this mode on Access Point and the stations and the Transmission Power of the clients gets adapted to minimal needed watts.
+son adapttxpower  - run Ollerus seperately in this mode on Access Point and the stations and the Transmission Power of the clients gets adapted to minimal needed watts.
 
-	son optimizechannel
-run on Access Point and stations. The Access Point organizes the WLAN-Channels used to communicate with each client. Determines over Noise which channels best to be used.
+son optimizechannel  - run on Access Point and stations. The Access Point organizes the WLAN-Channels used to communicate with each client. Determines over Noise which channels best to be used.
 
 
 Functions to check the Network-Performance
-	debug
-	monitorbw
-Monitors the Bandwith of a connection. Shows current (Netto) Datarate and a Moving Average.
-	contcheck
-Checks the Continuity of a connection. Whines if it get’s intermitted.
-	monitorbwcont
-And now guess, what this could be…
+- debug
+-> monitorbw  - Monitors the Bandwith of a connection. Shows current (Netto) Datarate and a Moving Average.
+-> contcheck  - Checks the Continuity of a connection. Whines if it get’s intermitted.
+-> monitorbwcont  - And now guess, what this could be…
 Same Syntax for following Options for all Monitoring-Commandos:
 	<Monitor-Cmd> [server | client] -||<Destination>||
-	schedule
-Time-Schedules the given Task.
+	
+schedule  - Time-Schedules the given Task.
 <Date> <Time> <Task> ||<Further_Options>||
 Date and Time Format: <YYYY-MM-DD> <HH:MM:SS>
 e.g.: ollerus debug schedule 2017-03-25 00:45:57 monitorbw [Options_for_monitorbw]
